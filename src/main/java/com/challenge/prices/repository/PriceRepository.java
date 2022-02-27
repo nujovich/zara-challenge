@@ -12,7 +12,7 @@ public interface PriceRepository extends JpaRepository<Price, Long> {
       + "WHERE ?1 BETWEEN startDate AND endDate AND "
       + "productId=?2 AND "
       + "brandId=?3 "
-      + "ORDER BY priority ASC")
+      + "ORDER BY priority DESC")
   List<Price> getPrices(LocalDateTime date, Long productId, Long brandId);
 
 }
