@@ -1,4 +1,4 @@
-package com.challenge.entity;
+package com.challenge.prices.entity;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;
