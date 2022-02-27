@@ -9,11 +9,11 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface PriceRepository extends JpaRepository<Price, Long> {
 
-  @Query("SELECT p FROM TBL_PRICES p"
-      + "WHERE ?1 BETWEEN p.START_DATE AND p.END_DATE AND "
-      + "p.PRODUCT_ID=?2 AND "
-      + "p.BRAND_ID=?3 "
-      + "ORDER BY p.PRIORITY ASC")
+  @Query("SELECT p FROM Price p "
+      + "WHERE ?1 BETWEEN startDate AND endDate AND "
+      + "productId=?2 AND "
+      + "brandId=?3 "
+      + "ORDER BY priority ASC")
   List<Price> getPrices(LocalDateTime date, Long productId, Long brandId);
 
 }
