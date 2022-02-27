@@ -15,7 +15,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 @ControllerAdvice
 public class ExceptionHandlerControllerAdvice {
 
-  @ExceptionHandler({DateTimeParseException.class, MethodArgumentTypeMismatchException.class})
+  @ExceptionHandler({DateTimeParseException.class, NumberFormatException.class})
   public ResponseEntity handleDatetimeFormatException(
       final Exception exception,
       final WebRequest request) {
