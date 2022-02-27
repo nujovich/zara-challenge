@@ -30,7 +30,7 @@ public class PriceRestController {
     public ResponseEntity getPrice(@PathVariable("dateTime") @DateTimeFormat(iso = ISO.DATE_TIME)
         String dateTime, @PathVariable("productId") Long productId, @PathVariable("brandId") Long brandId) {
         Optional<Price> price = Optional.empty();
-        Optional<List<Price>> prices = priceService.getPrices(LocalDateTime.parse(dateTime, DateTimeFormatter.ISO_DATE_TIME), productId, brandId);
+        Optional<List<Price>> prices = priceService.getPrices(LocalDateTime.parse(dateTime), productId, brandId);
 
         if(prices.isPresent()) {
             price = prices.get().stream().findFirst();
