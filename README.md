@@ -84,18 +84,18 @@ In case more than one price can be applied, the API will return the price with t
 ```bash
 curl --location --request GET 'http://localhost:8080/challenge/v1/price/2020-06-14T16:00/35455/1'
 ```
-```json
 {
-    "id": 2,
-    "brandId": 1,
-    "startDate": "2020-06-14T15:00:00",
-    "endDate": "2020-06-14T18:30:00",
-    "priceListId": 1,
-    "price": 25.45,
-    "productId": 35455,
-    "priority": 2,
-    "currency": "EUR"
+"id": 2,
+"brandId": 1,
+"startDate": "2020-06-14T15:00:00",
+"endDate": "2020-06-14T18:30:00",
+"priceListId": 1,
+"price": 25.45,
+"productId": 35455,
+"priority": 2,
+"currency": "EUR"
 }
+```json
 
 ## Developer
 [Nadia Ujovich](https://www.linkedin.com/in/nadiaujovich/)
