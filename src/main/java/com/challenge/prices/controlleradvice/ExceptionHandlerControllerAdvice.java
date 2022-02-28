@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
-import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 @ControllerAdvice
 public class ExceptionHandlerControllerAdvice {
@@ -21,7 +20,7 @@ public class ExceptionHandlerControllerAdvice {
       final WebRequest request) {
       String details = exception instanceof DateTimeParseException ?
           ErrorDetailEnum.DATETIME_PARSE_EXCEPTION_DETAIL_ERROR.getDetail() :
-          ErrorDetailEnum.METHOD_ARGUMENT_TYPE_MISMATCH_DETAIL_ERROR.getDetail();
+          ErrorDetailEnum.NUMBER_FORMAT_DETAIL_ERROR.getDetail();
       final ExceptionResponse ex =  new ExceptionResponse(exception.getMessage(),
           details,
           HttpStatus.BAD_REQUEST.value());
