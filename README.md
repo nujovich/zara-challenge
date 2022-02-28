@@ -98,4 +98,4 @@ curl --location --request GET 'http://localhost:8080/challenge/v1/price/2020-06-
 }
 
 ## Developer
-(Nadia Ujovich)[https://www.linkedin.com/in/nadiaujovich/]
+[Nadia Ujovich](https://www.linkedin.com/in/nadiaujovich/)
